@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <title>azure subscription checker</title>
+  <title>Azure学生订阅查询系统</title>
   <style>
     textarea {
       margin: 0 10%;
@@ -46,10 +46,8 @@
 
 <body>
   <div class="header">
-    <span>咋搭建?</span>
-    <a
-      href="https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FJ3n5en%2Fazure-subscription-checker"><img
-        src="https://img.icons8.com/color-glass/48/000000/google-logo.png" alt="google一下"/></a>
+    <span>Azure学生订阅查询系统</span>
+    <img src="https://img.icons8.com/fluency/50/000000/azure-1.png"/>
   </div>
   <div class="api">
     <span>api:</span>
@@ -57,9 +55,8 @@
   </div>
 
   <div x-data="accouts()">
-    <textarea x-bind:disabled="checking" placeholder="一行一个，邮箱和密码逗号(,)分开，如：
-1@1.com,2222
-2@2.com,55
+    <textarea x-bind:disabled="checking" placeholder="填写格式：邮箱,密码
+                                                      一个账号一行
 " x-model="accoutText" rows="10"></textarea>
     <br>
     <button x-on:click="check" x-bind:disabled="checking" x-text="[checking?'checking':'check']">check!</button>
